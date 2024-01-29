@@ -1,0 +1,9 @@
+[Unit]
+Description=SSRS Shutdown Script
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /usr/local/bin/ssrs-rpi-shutdown.py
+[Install]
+WantedBy=multi-user.target
