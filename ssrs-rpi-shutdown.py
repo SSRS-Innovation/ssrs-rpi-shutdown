@@ -7,7 +7,7 @@ import time
 shutdown_pin = 21
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(shutdown_pin, GPIO.IN)
+GPIO.setup(shutdown_pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 def shutdown(channel):
     print('Got shutdown signal')
